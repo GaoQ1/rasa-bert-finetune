@@ -239,11 +239,11 @@ class RasaJsonProcessor(DataProcessor):
         self.labels = set()
 
     def get_train_examples(self, data_dir):
-        file_path = os.path.join(data_dir, "train.json")
+        file_path = os.path.join(data_dir, "rasa_dataset_training.json")
         return self._create_examples(self._read_json(file_path), "train")
 
     def get_dev_examples(self, data_dir):
-        file_path = os.path.join(data_dir, "dev.json")
+        file_path = os.path.join(data_dir, "rasa_dataset_testing.json")
         return self._create_examples(self._read_json(file_path), "dev")
 
     def get_labels(self):
